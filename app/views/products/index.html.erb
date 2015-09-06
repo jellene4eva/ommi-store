@@ -1,0 +1,16 @@
+<% provide(:title, 'Ommi') %>
+
+<div class="container">
+  <% @products.each do |category, products| %>
+    <ul>
+      <% products.each do |product| %>
+      <li>
+        <%= image_tag product.default_image.path  %>
+        <h4><%= link_to product.name, product_path(product.permalink) %></h4>
+        <p><%= product.short_description %></p>
+        <p><b>Price:</b> <%= number_to_currency product.price %></p>
+      </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

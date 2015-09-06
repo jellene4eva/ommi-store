@@ -1,0 +1,14 @@
+<header class="navbar navbar-static-top">
+  <div class="logo" id="logo">
+    <%= link_to image_tag('logo.png'), 'root_path' %>
+  </div>
+
+  <div class="menu-bar">
+    <ul>
+      <li>Who are we</li>
+      <li>Search</li>
+      <li><%= current_order.total_items %> / <%= number_to_currency current_order.total_before_tax %></li>
+    </ul>
+  </div>
+</header>
+
