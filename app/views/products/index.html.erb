@@ -1,14 +1,25 @@
 <% provide(:title, 'Ommi') %>
 
+<div class="all-products-description">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+</div>
+
+
 <div class="container">
   <% @products.each do |category, products| %>
     <ul>
       <% products.each do |product| %>
-      <li>
-        <%= image_tag product.default_image.path  %>
-        <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-        <p><%= product.short_description %></p>
-        <p><b>Price:</b> <%= number_to_currency product.price %></p>
+      <li class="product-item col-md-4">
+        <%= link_to (image_tag (product.default_image.path), class: "product-thumb")  %>
+        <div class="product-details">
+          <h4><%= link_to product.name, product_path(product.permalink) %></h4>
+          <button>
+            <p>Price: <%= number_to_currency product.price %></p>
+          </button>
+        </div>
       </li>
       <% end %>
     </ul>
