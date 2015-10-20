@@ -12,6 +12,7 @@
 
   .menu-bar {
     @include no-bullets;
+    @include font-size-4;
     text-align: center;
     text-transform: uppercase;
 
