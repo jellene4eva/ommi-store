@@ -1,0 +1,74 @@
+// FONT
+// ----------------------------------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+$body-font: 'Muli', Helvetica, Arial, sans-serif;
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $body-font;
+  color: $grey;
+  font-weight: 900;
+}
+
+$body-font-size: 1rem;
+$step: 0.1rem;
+
+@mixin font-size-xs {
+  font-size: $body-font-size - $step * 2;
+}
+
+@mixin font-size-small {
+  font-size: $body-font-size - $step * 1;
+}
+@mixin font-size-6 {
+  font-size: $body-font-size;
+}
+@mixin font-size-5 {
+  font-size: $body-font-size + $step * 1;
+}
+@mixin font-size-4 {
+  font-size: $body-font-size + $step * 3;
+}
+@mixin font-size-3 {
+  font-size: $body-font-size + $step * 5;
+}
+@mixin font-size-2 {
+  font-size: $body-font-size + $step * 7;
+}
+@mixin font-size-1 {
+  font-size: $body-font-size + $step * 14;
+}
+@mixin font-size-0 {
+  font-size: $body-font-size + $step * 30;
+}
+@mixin font-size-jumbo1 {
+  font-size: $body-font-size + $step * 50;
+}
+@mixin font-size-jumbo2 {
+  font-size: $body-font-size + $step * 60;
+}
+
+h6, p {
+  @include font-size-6;
+}
+h5 {
+  @include font-size-5;
+}
+h4 {
+  @include font-size-4;
+}
+h3 {
+  @include font-size-3;
+}
+h2 {
+  @include font-size-2;
+}
+h1 {
+  @include font-size-1;
+}
+
