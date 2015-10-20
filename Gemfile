@@ -28,9 +28,10 @@ gem 'shoppe'
 gem 'zeus'
 
 # Styling
-gem 'compass-rails'
+gem 'compass-rails', '~> 2.0.5'
 gem 'compass-normalize'
 gem 'bootstrap-sass'
+gem 'susy'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
