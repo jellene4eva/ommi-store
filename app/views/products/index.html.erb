@@ -13,12 +13,15 @@
     <ul>
       <% products.each do |product| %>
       <li class="product-item col-md-4">
-        <%= link_to (image_tag (product.default_image.path), class: "product-thumb")  %>
-        <div class="product-details">
-          <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-          <button>
-            <p>Price: <%= number_to_currency product.price %></p>
-          </button>
+        <div class="product-thumb">
+
+          <div class="product-details">
+            <h4><%= link_to product.name, product_path(product.permalink) %></h4>
+            <button class="btn btn-primary">
+              <p>Price: <%= number_to_currency product.price %></p>
+            </button>
+          </div>
+          <%= image_tag (product.default_image.path) %>
         </div>
       </li>
       <% end %>

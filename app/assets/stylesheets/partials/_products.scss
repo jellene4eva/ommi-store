@@ -8,21 +8,42 @@
   margin-bottom: 20px;
 
   .product-thumb {
-    width: 200px;
-    height: 200px;
+    width: $thumbnail-width;
+    height: $thumbnail-width;
 
     img {
-      width: auto;
-      height: auto;
+      width: $thumbnail-width;
     }
+
+    &:hover img {
+      // @todo: it'll be javascript action, not a link
+      cursor: pointer;
+      opacity: 0.2;
+    }
+
+    &:hover .product-details {
+      display: block;
+    }
+
   }
 
   .product-details {
-    display: block;
+    width: $thumbnail-width;
+    height: 0; //messes with hover effect
+    display: none;
+    position: relative;
+    top: $thumbnail-width / 3;
+    bottom-margin: -40px;
+
+    h4 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      padding: 0 20px 0 20px;
+    }
   }
 
-  /*a:hover + div {*/
-    /*display: block;*/
-  /*}*/
+
 
 }
