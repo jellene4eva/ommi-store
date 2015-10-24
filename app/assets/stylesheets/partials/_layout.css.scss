@@ -22,3 +22,16 @@ a {
   }
 }
 
+.btn-primary {
+  border-radius: 0px;
+  border-color: white;
+  color: white;
+  background-color: rgba(0,0,0,0);
+
+  &:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+  }
+}
+
