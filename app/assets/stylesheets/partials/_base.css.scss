@@ -8,5 +8,13 @@ $darkest-grey: #333;
 $darkest-grey-semiopaque: rgba(51, 51, 51, .5);
 
 $ommi-green: #00706a;
-$background-color: #FCF8F9;
+$background-color: black;
 
+
+$thumbnail-width: 200px;
+
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
