@@ -14,14 +14,15 @@
       <% products.each do |product| %>
       <li class="product-item col-md-4">
         <div class="product-thumb">
-
+          <%= link_to product_path(product) do %>
+            <%= image_tag (product.default_image.path) %>
+          <% end %>
           <div class="product-details">
             <h4><%= link_to product.name, product_path(product.permalink) %></h4>
             <button class="btn btn-primary">
               <p>Price: <%= number_to_currency product.price %></p>
             </button>
           </div>
-          <%= image_tag (product.default_image.path) %>
         </div>
       </li>
       <% end %>
